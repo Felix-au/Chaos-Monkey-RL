@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaosrl"
+version = "0.1.0"
+description = "ChaosRL: Reinforcement Learning for Microservice Resilience Testing"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gymnasium>=1.0.0",
+    "stable-baselines3>=2.0.0",
+    "sb3-contrib>=2.0.0",
+    "torch>=2.0.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "networkx>=3.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pyyaml>=6.0",
+    "pytest>=7.0.0",
+    "tqdm>=4.65.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
