@@ -1,0 +1,47 @@
+[
+  {
+    "seed": 42,
+    "num_services": 20,
+    "timesteps": 4000,
+    "elapsed_seconds": 14.661499099980574,
+    "model_path": "results/checkpoints\\ppo_s20_seed42_R2.zip",
+    "final_mean_discovery": 2.6,
+    "final_mean_damage": 490.09638306544605
+  },
+  {
+    "seed": 43,
+    "num_services": 20,
+    "timesteps": 4000,
+    "elapsed_seconds": 14.28577860002406,
+    "model_path": "results/checkpoints\\ppo_s20_seed43_R2.zip",
+    "final_mean_discovery": 2.1,
+    "final_mean_damage": 876.4174481483308
+  },
+  {
+    "seed": 44,
+    "num_services": 20,
+    "timesteps": 4000,
+    "elapsed_seconds": 14.201368300011382,
+    "model_path": "results/checkpoints\\ppo_s20_seed44_R2.zip",
+    "final_mean_discovery": 2.3,
+    "final_mean_damage": 188.11582314123703
+  },
+  {
+    "seed": 45,
+    "num_services": 20,
+    "timesteps": 4000,
+    "elapsed_seconds": 13.846860399993602,
+    "model_path": "results/checkpoints\\ppo_s20_seed45_R2.zip",
+    "final_mean_discovery": 1.9,
+    "final_mean_damage": 2118.3446781438865
+  },
+  {
+    "seed": 46,
+    "num_services": 20,
+    "timesteps": 4000,
+    "elapsed_seconds": 13.897044499986805,
+    "model_path": "results/checkpoints\\ppo_s20_seed46_R2.zip",
+    "final_mean_discovery": 2.2,
+    "final_mean_damage": 196.27173185745716
+  }
+]
