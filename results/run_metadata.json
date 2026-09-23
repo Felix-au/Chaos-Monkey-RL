@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-05 23:17:57",
+  "platform": "Windows-10-10.0.19044-SP0",
+  "processor": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "torch_version": "2.12.1+cpu",
+  "libraries": {
+    "gymnasium": "1.4.0",
+    "stable_baselines3": "2.9.0",
+    "sb3_contrib": "2.9.0",
+    "pandas": "3.0.6",
+    "numpy": "2.5.0"
+  }
+}

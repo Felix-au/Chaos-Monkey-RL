@@ -1,0 +1,122 @@
+{
+  "ChaosRL_vs_ChaosMonkey": {
+    "discovery_comparison": {
+      "u_stat": 48723.5,
+      "p_value": 0.049449414722722414,
+      "significant_at_05": true,
+      "cohens_d": 0.3739883528507992,
+      "rank_biserial": -0.08274444444444451
+    },
+    "damage_comparison": {
+      "u_stat": 60680.0,
+      "p_value": 1.5218391708407158e-13,
+      "significant_at_05": true,
+      "cohens_d": 0.40557067571208194,
+      "rank_biserial": -0.34844444444444433
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 0.4633333333333333,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 152.54903525815675
+  },
+  "ChaosRL_vs_RandomAll": {
+    "discovery_comparison": {
+      "u_stat": 46937.5,
+      "p_value": 0.3063353839722368,
+      "significant_at_05": false,
+      "cohens_d": 0.10946338501185052,
+      "rank_biserial": -0.043055555555555625
+    },
+    "damage_comparison": {
+      "u_stat": 54736.0,
+      "p_value": 4.528166924350656e-06,
+      "significant_at_05": true,
+      "cohens_d": 0.7144370861863539,
+      "rank_biserial": -0.21635555555555563
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 0.6566666666666666,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 1802.8144798227838
+  },
+  "ChaosRL_vs_RoundRobin": {
+    "discovery_comparison": {
+      "u_stat": 41181.0,
+      "p_value": 0.05155402020063772,
+      "significant_at_05": false,
+      "cohens_d": -0.018806147976164846,
+      "rank_biserial": 0.08486666666666665
+    },
+    "damage_comparison": {
+      "u_stat": 90000.0,
+      "p_value": 1.0549641486892856e-99,
+      "significant_at_05": true,
+      "cohens_d": 1.576890301531238,
+      "rank_biserial": -1.0
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 0.78,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 4521.178597591681
+  },
+  "ChaosRL_vs_Bandit-UCB": {
+    "discovery_comparison": {
+      "u_stat": 42678.5,
+      "p_value": 0.22634577488912122,
+      "significant_at_05": false,
+      "cohens_d": -0.1607998308677699,
+      "rank_biserial": 0.051588888888888906
+    },
+    "damage_comparison": {
+      "u_stat": 57242.0,
+      "p_value": 8.122536572475594e-09,
+      "significant_at_05": true,
+      "cohens_d": 0.4981148467622029,
+      "rank_biserial": -0.27204444444444453
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 0.9466666666666667,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 658.5055628595734
+  },
+  "ChaosRL_vs_Bandit-EPSILON_GREEDY": {
+    "discovery_comparison": {
+      "u_stat": 42724.5,
+      "p_value": 0.2339444500697856,
+      "significant_at_05": false,
+      "cohens_d": -0.21465238931765546,
+      "rank_biserial": 0.05056666666666665
+    },
+    "damage_comparison": {
+      "u_stat": 56753.0,
+      "p_value": 3.1021678438859405e-08,
+      "significant_at_05": true,
+      "cohens_d": 0.5028247441096546,
+      "rank_biserial": -0.26117777777777773
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 1.03,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 644.7173577328547
+  },
+  "ChaosRL_vs_TabularQ": {
+    "discovery_comparison": {
+      "u_stat": 5550.5,
+      "p_value": 2.0759421275821314e-23,
+      "significant_at_05": true,
+      "cohens_d": -1.2652898915968245,
+      "rank_biserial": 0.6299666666666667
+    },
+    "damage_comparison": {
+      "u_stat": 28839.0,
+      "p_value": 1.897876200431557e-43,
+      "significant_at_05": true,
+      "cohens_d": 2.107173924277125,
+      "rank_biserial": -0.9226000000000001
+    },
+    "rl_mean_discovery": 0.7633333333333333,
+    "baseline_mean_discovery": 2.0,
+    "rl_mean_damage": 137.52833907225653,
+    "baseline_mean_damage": 4944.224494724366
+  }
+}
