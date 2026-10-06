@@ -197,10 +197,6 @@ Two-sided Mann-Whitney U tests and Cohen's *d* effect sizes comparing ChaosRL (M
 
 ## 5. Ablation Studies
 
-#### Figure 4: Reward & Generalization Ablation Studies
-![Figure 4: Ablation Studies & Generalization](figures/fig4_ablations.svg)
-*Figure 4: Comparison of reward variants (R1 vs R2 vs R3) and zero-shot scale generalization (20-service trained model evaluated on 100-service held-out system).*
-
 - **Reward Formulations (R1 vs R2 vs R3):**
   - **R1 (Pure Discovery):** Maximizes weaknesses found but incurs the highest collateral damage, as it has no penalty for crashing the gateway.
   - **R2 (Discovery - Damage Penalty):** Achieves the optimal safety-discovery tradeoff, discovering nearly all weaknesses while keeping damage constrained.
@@ -265,15 +261,6 @@ In addition to static PNG and SVG figures interjected above, ChaosRL provides fu
   <p><em>Interactive grouped bar chart displaying simple single-fault vs compound multi-fault discovery counts per method.</em></p>
   <iframe src="figures/fig3_simple_vs_compound.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
   <p><small>Formats: [<a href="figures/fig3_simple_vs_compound.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig3_simple_vs_compound.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig3_simple_vs_compound.png" target="_blank">High-Res PNG</a>]</small></p>
-</div>
-
-<br/>
-
-<div class="interactive-figure-container">
-  <h3>Interactive Figure 4: Reward Formulations & Generalization Ablations</h3>
-  <p><em>Dual-axis interactive subplots for reward formulations (R1 vs R2 vs R3) and zero-shot scale generalization.</em></p>
-  <iframe src="figures/fig4_ablations.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
-  <p><small>Formats: [<a href="figures/fig4_ablations.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig4_ablations.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig4_ablations.png" target="_blank">High-Res PNG</a>]</small></p>
 </div>
 
 ---

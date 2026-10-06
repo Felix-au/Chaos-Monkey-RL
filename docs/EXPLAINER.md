@@ -121,8 +121,6 @@ To make the comparison fair, every method gets the **exact same experiment budge
   - **Ideal position:** The top-left corner (maximum discovery, minimum damage).
 - **Figure 3 (`figures/fig3_simple_vs_compound.png`):**
   - Compares how many single-fault weaknesses vs. tricky multi-fault compound weaknesses each method uncovered.
-- **Figure 4 (`figures/fig4_ablations.png`):**
-  - Compares the R1, R2, and R3 reward designs, and shows how well a policy trained on 20 services performs when tested on a 100-service system.
 
 ---
 
