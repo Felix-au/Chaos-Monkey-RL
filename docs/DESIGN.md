@@ -47,33 +47,4 @@ In microservice architectures, fault injection testing (chaos engineering) is vi
 +-----------------------------------------------------------------------------------+
 ```
 
-## 3. Milestones & Implementation Roadmap
 
-- **Milestone 1: Simulator & Ground Truth Generator**
-  - Implement topology generator (DAG, node placement, replica counts, service attributes).
-  - Implement discrete-time aggregate dynamics (load propagation, queueing latency, error rate, timeouts, retries, circuit breakers, fallbacks).
-  - Implement 6 fault injection types + rollback mechanism.
-  - Implement planted ground-truth weaknesses (single and compound) + deterministic matching logic.
-  - Write unit tests (`tests/test_simulator.py`).
-
-- **Milestone 2: Gymnasium Environment & Baseline Agents**
-  - Implement `ChaosEnv` with Gymnasium API.
-  - Build scalable observation representations (fixed-size summary + history vector).
-  - Action masking integration (`sb3-contrib.common.maskable`).
-  - Implement reward variants (R1, R2, R3).
-  - Implement baseline agents (Chaos Monkey, Random-All, Round-Robin, UCB/Epsilon-Greedy Bandit, Tabular Q).
-  - Write unit tests (`tests/test_env.py`, `tests/test_agents.py`).
-
-- **Milestone 3: Training & Experiment Pipeline**
-  - Implement `train.py` with multi-seed training, checkpointing, and evaluation tracking.
-  - Implement `evaluate.py` supporting `--quick` (fast testing) and `--full` (comprehensive runs).
-  - Ensure zero evaluation on training systems; strictly held-out test systems.
-
-- **Milestone 4: RCAEval Real-Data Calibration Attempt**
-  - Download / process RCAEval traces (Zenodo/GitHub) or document offline calibration.
-  - Calibrate simulator parameters (latency degradation curves, error propagation).
-
-- **Milestone 5: Execution, Analysis & Reporting**
-  - Execute quick and full benchmark suites.
-  - Generate plots and statistics in `figures/` and `results/`.
-  - Compile comprehensive `REPORT.md`, `docs/EXPLAINER.md`, `docs/ASSUMPTIONS.md`, and `README.md`.
