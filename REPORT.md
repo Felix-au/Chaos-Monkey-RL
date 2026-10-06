@@ -21,7 +21,15 @@ This report presents empirical findings from rigorous evaluations across synthet
 
 ---
 
-## 3. Quantitative Evaluation Results
+## 3. Quantitative Evaluation Results & Metric Definitions
+
+### Evaluation Metrics Defined:
+- **Weaknesses Found (Mean ± SD):** Total planted vulnerabilities discovered during the episode. Higher is better.
+- **Discovery Rate (%):** Percentage of planted weaknesses found (Found / Planted).
+- **Total Damage:** Accumulated SLO-violation time and error-rate cost incurred. Measures collateral damage. **Lower is safer.**
+- **Exp to 1st Weakness:** Number of experiments required to find the very first weakness. Measures initial sample efficiency. **Lower is better.**
+- **Exp to 50% / 90%:** Budget required to discover 50% / 90% of all planted weaknesses.
+- **Decision Latency (ms):** Wall-clock decision time taken by policy per step (e.g. 0.65ms for ChaosRL vs 0.05ms for random).
 
 The table below summarizes performance across all methods on the held-out test architectures:
 
