@@ -70,8 +70,8 @@ To evaluate methods scientifically, we plant specific, realistic architectural w
   Using `MaskablePPO`, invalid or already-tested actions are masked out so the agent doesn't waste its budget re-testing things it already checked.
 - **Reward Function (What Drives the Agent):**
   We compare three reward functions:
-  - **R1 (Pure Novelty):** $+1$ for every newly discovered weakness; $0$ otherwise.
-  - **R2 (Safety-Constrained):** $+1$ for every new discovery, minus a penalty proportional to the damage caused.
+  - **R1 (Pure Novelty):** +1 for every newly discovered weakness; 0 otherwise.
+  - **R2 (Safety-Constrained):** +1 for every new discovery, minus a penalty proportional to the damage caused.
   - **R3 (Safety + Curiosity):** R2 minus a penalty for repeating actions, plus a small bonus for discovering sub-SLO degradation.
 
 ---
@@ -88,8 +88,8 @@ To make the comparison fair, every method gets the **exact same experiment budge
 ### Understanding the Evaluation Metrics
 
 - **Weaknesses Found (Mean ± SD):** The total number of planted architectural vulnerabilities uncovered during the episode. Higher is better.
-- **Discovery Rate (%):** The percentage of planted weaknesses found ($N_{\text{found}} / N_{\text{planted}}$).
-- **Total Damage:** Accumulated SLO-violation time and error-rate cost incurred during experiments ($D = \sum [\text{error\_rate} + (\text{p99} - 300)/1000]$). Measures collateral system damage. **Lower is safer.**
+- **Discovery Rate (%):** The percentage of planted weaknesses found (Found / Planted).
+- **Total Damage:** Accumulated SLO-violation time and error-rate cost incurred during experiments: `D = Σ [error_rate + (p99 - 300)/1000]`. Measures collateral system damage. **Lower is safer.**
 - **Exp to 1st Weakness:** The number of experiments required to discover the very first weakness. Measures initial sample efficiency. **Lower is better.**
 - **Exp to 50% / 90%:** Number of experiments required to uncover 50% / 90% of all planted weaknesses.
 - **Decision Latency (ms):** Wall-clock decision time taken by the policy per experiment step (e.g. 0.65ms for ChaosRL vs 0.05ms for random). Demonstrates CPU decision speed.
@@ -100,11 +100,11 @@ To make the comparison fair, every method gets the **exact same experiment budge
   - On 20 services, ChaosRL reaches the first weakness in **1.0 experiment** on average (instant targeted hit), whereas Chaos Monkey takes **7.8 experiments**.
   - Chaos Monkey is structurally blind to 5 out of 6 fault categories (network delay, packet drops, CPU stress, retry storms) because it only kills pods.
 - **ChaosRL vs. Round-Robin & Tabular Q (Damage Mitigation):**
-  - Round-Robin causes **50x higher damage** ($9,436.69$ vs $186.02$, $p = 0.00018$, Cohen's $d = 3.54$).
-  - Tabular Q causes **26x higher damage** ($4,944.22$ vs $186.02$, $p = 0.00018$, Cohen's $d = 4.22$).
+  - Round-Robin causes **50x higher damage** (9,436.69 vs 186.02, p = 0.00018, Cohen's d = 3.54).
+  - Tabular Q causes **26x higher damage** (4,944.22 vs 186.02, p = 0.00018, Cohen's d = 4.22).
   - Round-Robin and Tabular Q blindly trigger prolonged, severe outages without safety constraints. ChaosRL's R2 reward penalty forces it to discover weaknesses cleanly without crashing the gateway.
 - **Multi-Armed Bandits vs. ChaosRL:**
-  - Bandits find simple weaknesses quickly in small action spaces (2.76 vs 1.99 on 20 services), but incur **6.8x higher collateral damage** ($1,261.57$ vs $186.02$) because bandits have no safety-constrained penalty terms.
+  - Bandits find simple weaknesses quickly in small action spaces (2.76 vs 1.99 on 20 services), but incur **6.8x higher collateral damage** (1,261.57 vs 186.02) because bandits have no safety-constrained penalty terms.
 
 ---
 

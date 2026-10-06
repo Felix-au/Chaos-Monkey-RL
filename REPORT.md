@@ -117,7 +117,7 @@ To ensure the synthetic simulator reflects realistic failure dynamics, we calibr
 ## 7. Failure Analysis & Honest Negative Results
 
 1. **Where ChaosRL Loses or Ties:**
-   - In very small budgets ($B < 10$) on tiny topologies, simple random exploration occasionally stumbles upon the first single-replica hub weakness just as quickly as RL, because random chance has high probability of hitting a small action space.
+   - In very small budgets (budget < 10) on tiny topologies, simple random exploration occasionally stumbles upon the first single-replica hub weakness just as quickly as RL, because random chance has high probability of hitting a small action space.
 2. **Reward Hacking Safeguards:**
    - Under R1, the agent occasionally attempted repeated severe faults on the same broken hub. Action masking (`mask_already_tried=True`) and the R2 damage penalty effectively eliminated this pathology.
 3. **Compound Weaknesses:**
