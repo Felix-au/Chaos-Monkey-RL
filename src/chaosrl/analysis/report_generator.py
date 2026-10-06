@@ -197,8 +197,6 @@ Two-sided Mann-Whitney U tests and Cohen's *d* effect sizes comparing ChaosRL (M
 
 ## 5. Ablation Studies
 
-{ablation_text}
-
 #### Figure 4: Reward & Generalization Ablation Studies
 ![Figure 4: Ablation Studies & Generalization](figures/fig4_ablations.svg)
 *Figure 4: Comparison of reward variants (R1 vs R2 vs R3) and zero-shot scale generalization (20-service trained model evaluated on 100-service held-out system).*

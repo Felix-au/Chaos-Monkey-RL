@@ -92,25 +92,6 @@ Two-sided Mann-Whitney U tests and Cohen's *d* effect sizes comparing ChaosRL (M
 
 ## 5. Ablation Studies
 
-### Reward Formulations
-| Reward Variant | Mean Weaknesses Found | Mean Total Damage |
-|:---:|:---:|:---:|
-| R1 | 1.33 | 152.10 |
-| R2 | 1.33 | 152.10 |
-| R3 | 1.33 | 152.10 |
-
-### Observation Space: History Feature Ablation
-| Setting | Mean Weaknesses Found |
-|:---:|:---:|
-| No-History | 1.33 |
-| With-History | 1.33 |
-
-### Cross-Scale Generalization
-| Evaluation System Scale | Mean Weaknesses Found |
-|:---:|:---:|
-| Test-100svcs | 0.00 |
-| Test-20svcs | 2.00 |
-
 #### Figure 4: Reward & Generalization Ablation Studies
 ![Figure 4: Ablation Studies & Generalization](figures/fig4_ablations.svg)
 *Figure 4: Comparison of reward variants (R1 vs R2 vs R3) and zero-shot scale generalization (20-service trained model evaluated on 100-service held-out system).*
