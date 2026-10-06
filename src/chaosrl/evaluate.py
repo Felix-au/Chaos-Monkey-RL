@@ -31,6 +31,7 @@ from chaosrl.analysis.plotting import (
     plot_damage_vs_discovery,
     plot_simple_vs_compound,
     plot_ablations,
+    generate_all_plots,
 )
 
 
@@ -245,10 +246,8 @@ def run_evaluation_suite(
     with open(stats_json, "w") as f:
         json.dump(stats_results, f, indent=2)
 
-    # Generate plots
-    plot_discovery_curves(curves_df, "figures/fig1_discovery_curves.png")
-    plot_damage_vs_discovery(summary_df, "figures/fig2_damage_vs_discovery.png")
-    plot_simple_vs_compound(summary_df, "figures/fig3_simple_vs_compound.png")
+    # Generate static (PNG, SVG) and interactive (HTML) plots
+    generate_all_plots(curves_df, summary_df, fig_dir="figures")
 
     return {
         "summary_df": summary_df,

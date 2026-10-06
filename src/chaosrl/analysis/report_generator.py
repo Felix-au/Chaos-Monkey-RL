@@ -167,11 +167,19 @@ The table below summarizes performance across all methods on the held-out test a
 
 {table_md}
 
-### Key Figures Generated:
-- **Figure 1 (Discovery Curves):** [`figures/fig1_discovery_curves.png`](file:///figures/fig1_discovery_curves.png) displays cumulative weakness discovery trajectories over the experiment budget with 95% bootstrap confidence bands.
-- **Figure 2 (Damage vs. Discovery Tradeoff):** [`figures/fig2_damage_vs_discovery.png`](file:///figures/fig2_damage_vs_discovery.png) illustrates safety efficiency.
-- **Figure 3 (Simple vs. Compound Breakdown):** [`figures/fig3_simple_vs_compound.png`](file:///figures/fig3_simple_vs_compound.png) highlights multi-fault vulnerability discovery.
-- **Figure 4 (Ablations):** [`figures/fig4_ablations.png`](file:///figures/fig4_ablations.png) details reward variants and generalization.
+### Quantitative Figures (Interjected Inline):
+
+#### Figure 1: Weakness Discovery Trajectory
+![Figure 1: Weakness Discovery Trajectory](figures/fig1_discovery_curves.svg)
+*Figure 1: Cumulative weakness discovery trajectory over experiment budget with 95% bootstrap confidence bands across 5 evaluation seeds.*
+
+#### Figure 2: Efficiency & Safety Tradeoff
+![Figure 2: Efficiency & Safety Tradeoff](figures/fig2_damage_vs_discovery.svg)
+*Figure 2: Scatter plot of Total Collateral Damage vs Weaknesses Discovered (mean ± 1.96 SEM). Top-left quadrant represents maximum efficiency and safety.*
+
+#### Figure 3: Simple vs. Compound Weakness Breakdown
+![Figure 3: Simple vs Compound Breakdown](figures/fig3_simple_vs_compound.svg)
+*Figure 3: Grouped bar chart illustrating simple single-fault vs compound multi-fault vulnerability discovery across all baseline agents.*
 
 ---
 
@@ -190,6 +198,10 @@ Two-sided Mann-Whitney U tests and Cohen's *d* effect sizes comparing ChaosRL (M
 ## 5. Ablation Studies
 
 {ablation_text}
+
+#### Figure 4: Reward & Generalization Ablation Studies
+![Figure 4: Ablation Studies & Generalization](figures/fig4_ablations.svg)
+*Figure 4: Comparison of reward variants (R1 vs R2 vs R3) and zero-shot scale generalization (20-service trained model evaluated on 100-service held-out system).*
 
 - **Reward Formulations (R1 vs R2 vs R3):**
   - **R1 (Pure Discovery):** Maximizes weaknesses found but incurs the highest collateral damage, as it has no penalty for crashing the gateway.
@@ -228,7 +240,47 @@ To ensure the synthetic simulator reflects realistic failure dynamics, we calibr
 
 ---
 
-## 9. Reproduction Instructions
+## 9. Interactive Benchmark Figures & Visualizations
+
+In addition to static PNG and SVG figures interjected above, ChaosRL provides fully interactive Plotly visualizations. These plots allow real-time hover inspection of exact data points, confidence interval bounds, trace visibility toggling, and zoom/pan capabilities.
+
+<div class="interactive-figure-container">
+  <h3>Interactive Figure 1: Weakness Discovery Trajectory</h3>
+  <p><em>Hover to view exact mean and 95% bootstrap confidence bounds per experiment step. Click legend items to filter baseline curves.</em></p>
+  <iframe src="figures/fig1_discovery_curves.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
+  <p><small>Formats: [<a href="figures/fig1_discovery_curves.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig1_discovery_curves.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig1_discovery_curves.png" target="_blank">High-Res PNG</a>]</small></p>
+</div>
+
+<br/>
+
+<div class="interactive-figure-container">
+  <h3>Interactive Figure 2: Efficiency & Safety Tradeoff</h3>
+  <p><em>Interactive scatter plot with 2D error bars. Hover over points to view exact collateral damage and discovery rates.</em></p>
+  <iframe src="figures/fig2_damage_vs_discovery.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
+  <p><small>Formats: [<a href="figures/fig2_damage_vs_discovery.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig2_damage_vs_discovery.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig2_damage_vs_discovery.png" target="_blank">High-Res PNG</a>]</small></p>
+</div>
+
+<br/>
+
+<div class="interactive-figure-container">
+  <h3>Interactive Figure 3: Simple vs Compound Weakness Breakdown</h3>
+  <p><em>Interactive grouped bar chart displaying simple single-fault vs compound multi-fault discovery counts per method.</em></p>
+  <iframe src="figures/fig3_simple_vs_compound.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
+  <p><small>Formats: [<a href="figures/fig3_simple_vs_compound.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig3_simple_vs_compound.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig3_simple_vs_compound.png" target="_blank">High-Res PNG</a>]</small></p>
+</div>
+
+<br/>
+
+<div class="interactive-figure-container">
+  <h3>Interactive Figure 4: Reward Formulations & Generalization Ablations</h3>
+  <p><em>Dual-axis interactive subplots for reward formulations (R1 vs R2 vs R3) and zero-shot scale generalization.</em></p>
+  <iframe src="figures/fig4_ablations.html" width="100%" height="480" frameborder="0" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;"></iframe>
+  <p><small>Formats: [<a href="figures/fig4_ablations.html" target="_blank">Interactive HTML</a>] | [<a href="figures/fig4_ablations.svg" target="_blank">Vector SVG</a>] | [<a href="figures/fig4_ablations.png" target="_blank">High-Res PNG</a>]</small></p>
+</div>
+
+---
+
+## 10. Reproduction Instructions
 
 To reproduce all results, tables, and figures from scratch:
 ```bash

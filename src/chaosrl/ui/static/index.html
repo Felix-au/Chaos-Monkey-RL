@@ -287,32 +287,79 @@
         </div>
       </div>
 
-      <!-- Publication Figures Showcase -->
+      <!-- Publication & Interactive Figures Showcase -->
       <div class="panel figures-panel">
         <div class="panel-header">
-          <h3>Generated Publication Figures</h3>
-          <span class="panel-subtitle">Directly produced by matplotlib from execution logs</span>
+          <h3>Interactive Benchmark Visualizations & Publication Figures</h3>
+          <span class="panel-subtitle">Fully interactive Plotly charts with real-time hover inspection, trace toggles, and vector SVG/PNG downloads</span>
         </div>
         <div class="figures-grid">
-          <div class="fig-card">
-            <h4>Figure 1: Weakness Discovery Trajectory</h4>
-            <p>Cumulative discoveries across experiment budget with 95% bootstrap confidence bands.</p>
-            <div class="fig-img-box"><img src="/figures/fig1_discovery_curves.png" alt="Figure 1" loading="lazy"></div>
+          <div class="fig-card full-width-fig">
+            <div class="fig-card-header">
+              <div>
+                <h4>Figure 1: Weakness Discovery Trajectory</h4>
+                <p>Cumulative weakness discovery across experiment budget with 95% bootstrap confidence bands across 5 evaluation seeds.</p>
+              </div>
+              <div class="fig-format-actions">
+                <a href="/figures/fig1_discovery_curves.html" target="_blank" class="btn btn-sm btn-outline">Interactive HTML</a>
+                <a href="/figures/fig1_discovery_curves.svg" target="_blank" class="btn btn-sm btn-outline">Vector SVG</a>
+                <a href="/figures/fig1_discovery_curves.png" target="_blank" class="btn btn-sm btn-outline">PNG</a>
+              </div>
+            </div>
+            <div class="fig-iframe-box">
+              <iframe src="/figures/fig1_discovery_curves.html" width="100%" height="450" frameborder="0"></iframe>
+            </div>
           </div>
-          <div class="fig-card">
-            <h4>Figure 2: Discovery vs Damage Tradeoff</h4>
-            <p>Safety efficiency showing how ChaosRL discovers flaws with minimal collateral damage.</p>
-            <div class="fig-img-box"><img src="/figures/fig2_damage_vs_discovery.png" alt="Figure 2" loading="lazy"></div>
+
+          <div class="fig-card full-width-fig">
+            <div class="fig-card-header">
+              <div>
+                <h4>Figure 2: Efficiency & Safety Tradeoff</h4>
+                <p>Safety efficiency scatter plot of Total Collateral Damage vs Weaknesses Discovered (mean ± 1.96 SEM).</p>
+              </div>
+              <div class="fig-format-actions">
+                <a href="/figures/fig2_damage_vs_discovery.html" target="_blank" class="btn btn-sm btn-outline">Interactive HTML</a>
+                <a href="/figures/fig2_damage_vs_discovery.svg" target="_blank" class="btn btn-sm btn-outline">Vector SVG</a>
+                <a href="/figures/fig2_damage_vs_discovery.png" target="_blank" class="btn btn-sm btn-outline">PNG</a>
+              </div>
+            </div>
+            <div class="fig-iframe-box">
+              <iframe src="/figures/fig2_damage_vs_discovery.html" width="100%" height="450" frameborder="0"></iframe>
+            </div>
           </div>
-          <div class="fig-card">
-            <h4>Figure 3: Simple vs Compound Breakdown</h4>
-            <p>Performance on single-fault vulnerabilities vs tricky multi-fault compound failures.</p>
-            <div class="fig-img-box"><img src="/figures/fig3_simple_vs_compound.png" alt="Figure 3" loading="lazy"></div>
+
+          <div class="fig-card full-width-fig">
+            <div class="fig-card-header">
+              <div>
+                <h4>Figure 3: Simple vs Compound Weakness Breakdown</h4>
+                <p>Performance breakdown on single-fault vulnerabilities vs multi-fault compound resilience flaws.</p>
+              </div>
+              <div class="fig-format-actions">
+                <a href="/figures/fig3_simple_vs_compound.html" target="_blank" class="btn btn-sm btn-outline">Interactive HTML</a>
+                <a href="/figures/fig3_simple_vs_compound.svg" target="_blank" class="btn btn-sm btn-outline">Vector SVG</a>
+                <a href="/figures/fig3_simple_vs_compound.png" target="_blank" class="btn btn-sm btn-outline">PNG</a>
+              </div>
+            </div>
+            <div class="fig-iframe-box">
+              <iframe src="/figures/fig3_simple_vs_compound.html" width="100%" height="450" frameborder="0"></iframe>
+            </div>
           </div>
-          <div class="fig-card">
-            <h4>Figure 4: Ablation Studies</h4>
-            <p>Comparison of reward variants (R1/R2/R3) and cross-scale generalization (20 &rarr; 100 svcs).</p>
-            <div class="fig-img-box"><img src="/figures/fig4_ablations.png" alt="Figure 4" loading="lazy"></div>
+
+          <div class="fig-card full-width-fig">
+            <div class="fig-card-header">
+              <div>
+                <h4>Figure 4: Reward Formulations & Generalization Ablations</h4>
+                <p>Dual-axis subplots evaluating reward formulations (R1 vs R2 vs R3) and zero-shot cross-scale generalization (20 &rarr; 100 services).</p>
+              </div>
+              <div class="fig-format-actions">
+                <a href="/figures/fig4_ablations.html" target="_blank" class="btn btn-sm btn-outline">Interactive HTML</a>
+                <a href="/figures/fig4_ablations.svg" target="_blank" class="btn btn-sm btn-outline">Vector SVG</a>
+                <a href="/figures/fig4_ablations.png" target="_blank" class="btn btn-sm btn-outline">PNG</a>
+              </div>
+            </div>
+            <div class="fig-iframe-box">
+              <iframe src="/figures/fig4_ablations.html" width="100%" height="450" frameborder="0"></iframe>
+            </div>
           </div>
         </div>
       </div>
