@@ -106,24 +106,4 @@ To make the comparison fair, every method gets the **exact same experiment budge
 - **Multi-Armed Bandits vs. ChaosRL:**
   - Bandits find simple weaknesses quickly in small action spaces (2.76 vs 1.99 on 20 services), but incur **6.8x higher collateral damage** (1,261.57 vs 186.02) because bandits have no safety-constrained penalty terms.
 
----
 
-## 6. How to Read Each Generated Figure
-
-- **Figure 1 (`figures/fig1_discovery_curves.png`):**
-  - **X-axis:** Number of experiments used (the budget).
-  - **Y-axis:** Cumulative weaknesses discovered.
-  - **Shaded bands:** 95% bootstrap confidence intervals across seeds.
-  - **Key takeaway:** A steeper curve that plateaus higher means the agent finds weaknesses faster and finds more of them.
-- **Figure 2 (`figures/fig2_damage_vs_discovery.png`):**
-  - **X-axis:** Total damage caused (lower is safer).
-  - **Y-axis:** Weaknesses found (higher is better).
-  - **Ideal position:** The top-left corner (maximum discovery, minimum damage).
-- **Figure 3 (`figures/fig3_simple_vs_compound.png`):**
-  - Compares how many single-fault weaknesses vs. tricky multi-fault compound weaknesses each method uncovered.
-
----
-
-## 7. Real-Data Calibration (RCAEval)
-
-We downloaded real telemetry traces from the **RCAEval** benchmark (Online Boutique application). The real data proved that during CPU fault injection, CPU usage spikes by over **35x** compared to normal traffic. We used this empirical ratio to calibrate our simulator's CPU stress parameters, ensuring our simulated mechanics reflect real cloud behavior.
